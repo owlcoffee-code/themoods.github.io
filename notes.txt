@@ -1,0 +1,9 @@
+option 1: https://colorhunt.co/palette/c4dfdfd2e9e9e3f4f4f8f6f4
+option 2: https://colorhunt.co/palette/b6fffa98e4ff80b3ff687eff
+option 3: https://colorhunt.co/palette/6499e99eddffa6f6ffbefff7
+option 4: https://colorhunt.co/palette/0719520b666a35a29f97feed
+option 5: https://colorhunt.co/palette/8c0000bd2000fa1e0effbe0f
+option 6: https://colorhunt.co/palette/61826479ac78b0d9b1d0e7d2
+
+ box-shadow: 12px 12px 10px rgba(0, 102, 204, 0.7), -12px -12px 10px rgba(0, 102, 204, 0.7); /* Rounded box shadow */
+ rgb(245, 245, 36)

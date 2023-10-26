@@ -1,0 +1,207 @@
+:root {
+    --background-color: rgb(0, 0, 0);
+    --blue-shadow: rgba(0, 102, 204, 0.7);
+    --themoodz-blue: #2dc2c2;
+    --yellow: rgb(245, 245, 36);
+    --yellow-withalpha: rgba(245, 245, 36, 0.7);
+}
+
+/* Reset some default styles and make the page mobile-friendly */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes any unwanted spacing */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--background-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgb(210, 233, 233);
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+}
+
+#content {
+    background-color: var(--background-color);
+    padding: 20px;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: var(--background-color);
+    text-align: right;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Additional CSS styles for content can be added here */
+
+/* Gig Section Calendar */
+.gig_section {
+    color: var(--themoodz-blue);
+    background: var(--background-color);
+    padding: 20px;
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: -7px 0px 15px var(--yellow);
+}
+
+.gig_section h1 {
+    font-size: 1.2rem;
+    color: rgb(0, 102, 204); /* Blue color or any color you prefer */
+    margin: 0;
+}
+
+.gig_section p {
+    margin: 5px 0;
+}
+
+.gig_section address {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Style the event date separately */
+.gig_section p:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Style the event time separately */
+.gig_section p:last-child {
+    font-weight: bold;
+    color: rgb(255, 0, 0); /* Red color or any color you prefer */
+}
+
+/* Hamburger Menu */
+.mobile-menu-icon {
+    cursor: pointer;
+    display: none;
+    font-size: 26px;
+    margin-bottom:20px;
+    position: relative;
+    z-index: 1;
+}
+
+.mobile-nav {
+    background: rgb(196, 223, 223);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: none; /* Initially hidden */
+    z-index: 2;
+}
+
+.mobile-nav.show {
+    display: block; /* Show the menu when the 'show' class is applied */
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav li {
+    margin: 10px;
+}
+
+.random-container {
+    max-width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+}
+
+.vinyl-container {
+    display: inline-block;
+    animation: spin 10s linear infinite; /*Adjust the duration (5s) as needed*/
+    margin-bottom:30px;
+}
+
+.vinyl-image {
+    width: 400px; /* Adjust the size as needed */
+    height: 400px;
+    /* box-shadow: 0 0 20px var(--blue-shadow); */
+    box-shadow: 0 0 20px var(--yellow-withalpha);
+}
+
+
+.social-media-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    font-size: 24px; /* Adjust the icon size */
+    color: var(--themoodz-blue); /* Icon color */
+    margin: 0 10px; /* Add space between icons */
+    text-decoration: none; /* Remove underline from links */
+    /* box-shadow: -9px 0px 18px var(--blue-shadow); */
+   
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+        background: rgb(210, 233, 233);
+    }
+    .vinyl-container {
+        max-width: 200px;
+        height: auto;
+    }
+    .vinyl-image {
+        max-width: 200px; /* Adjust the size as needed */
+       height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .random-container {
+        width: 33.33%;
+    }
+}
