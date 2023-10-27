@@ -1,0 +1,343 @@
+:root {
+    --background-color: black;
+    --blue-shadow: rgba(0, 102, 204, 0.7);
+    --themoodz-blue: #2dc2c2;
+}
+
+/* Reset some default styles and make the page mobile-friendly */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/band.gif');
+     background-repeat: no-repeat; 
+     background-position: center bottom;
+     background-attachment: fixed;
+    background-color: var(--background-color);
+    opacity: 0.8;
+}
+
+canvas {
+    position: absolute;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/*Set a specific height for the canvas*/
+/* canvas {
+    height: 100%;
+    width: 97%;
+    
+} */
+
+
+
+/* .particles {
+    position: absolute;
+    width: 97%; 
+    height: 100vh;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 4;
+    border: 1px red solid;
+} */
+    
+/* Add styles for the particles */
+
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Removes any unwanted spacing */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--background-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgb(210, 233, 233);
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+}
+
+#content {
+    background-color: var(--background-color);
+    padding: 20px;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: var(--background-color);
+    text-align: right;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Additional CSS styles for content can be added here */
+
+/* Gig Section Calendar */
+.gig_section {
+    color: white;
+    padding: 20px;
+    border: 2px solid var(--blue-shadow);
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+    /* box-shadow: -9px 0px 10px var(--blue-shadow); */
+}
+
+.gig_section h1 {
+    font-size: 1.2rem;
+    color: rgb(0, 102, 204);
+    /* Blue color or any color you prefer */
+    margin: 0;
+}
+
+.gig_section p {
+    margin: 5px 0;
+}
+
+.gig_section address {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Style the event date separately */
+.gig_section p:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Style the event time separately */
+.gig_section p:last-child {
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    /* Red color or any color you prefer */
+}
+
+nav {
+    background-color: rgb(210, 233, 233);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout for desktop */
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+}
+
+/* Hamburger Menu */
+/* .mobile-menu-icon {
+    cursor: pointer;
+    display: none;
+    font-size: 26px;
+    margin-bottom:20px;
+    position: relative;
+    z-index: 1;
+} */
+
+.mobile-nav {
+    scroll-behavior: smooth;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    z-index: 3;
+    transition: left 0.4s;
+}
+
+.close-button {
+    display: none;
+}
+
+/* .mobile-nav {
+    background: rgb(196, 223, 223);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: none; 
+    z-index: 2;
+} */
+
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+} */
+
+.mobile-nav li {
+    margin: 0 20px;
+    border-bottom: 1px var(--blue-shadow) solid;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mobile-menu-icon {
+    cursor: pointer;
+    font-size: 26px;
+    position: relative;
+    z-index: 1;
+    display: none;
+    /* Initially hidden on larger screens */
+}
+
+
+
+.vinyl-container {
+    display: inline-block;
+    /*Adjust the duration (5s) as needed*/
+    margin-bottom: 30px;
+}
+
+.vinyl-image {
+    width: 400px;
+    /* Adjust the size as needed */
+    height: 400px;
+    box-shadow: 0 0 20px var(--blue-shadow);
+}
+
+
+.social-media-icons {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.social-media-icons a {
+    font-size: 24px;
+    /* Adjust the icon size */
+    color: var(--themoodz-blue);
+    /* Icon color */
+    margin: 0 10px;
+    /* Add space between icons */
+    text-decoration: none;
+    /* Remove underline from links */
+    box-shadow: -9px 0px 18px var(--blue-shadow);
+
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    /* canvas {
+        height: 100%;
+        width: 97%;
+    } */
+    .mobile-nav {
+        /* background: rgb(196, 223, 223); */
+        background: black;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 46%;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        display: grid;
+        z-index: 3;
+        transition: left 0.4s;
+    }
+
+    .mobile-nav.show{
+        display: grid;
+        left: 0;
+        z-index: 3
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        display: block;
+    }
+
+    .mobile-nav li {
+        margin: 10px 0;
+        border-bottom: 1px var(--themoodz-blue) solid;
+        padding: 0.4em;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .close-button {
+        display: block;
+        text-align: center; /* Center the text horizontally */
+        margin: 10px auto; /* Center the button horizontally */
+        width: 2.5em;
+        border: 1px var(--themoodz-blue) solid;
+        border-radius: 0.5em;
+        height: 1.3em;
+    }
+
+    .vinyl-container {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .vinyl-image {
+        max-width: 200px;
+        /* Adjust the size as needed */
+        height: auto;
+    }
+
+}
+
+@keyframes particleFade {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-200px, -200px); /* Adjust the distance if needed */
+        opacity: 0;
+    }
+}
