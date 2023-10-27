@@ -5,7 +5,7 @@
 }
 
 /* Reset some default styles and make the page mobile-friendly */
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -15,8 +15,21 @@ body {
      background-attachment: fixed;
     background-color: var(--background-color);
     opacity: 0.8;
+} */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the width to 100% to cover the screen horizontally */
+    height: 100%; /* Set the height to 100% to cover the screen vertically */
+    object-fit: contain; /* Maintain original dimensions and fit within the container */
+    opacity: 0.4;
+}
 canvas {
     position: absolute;
     background-color: transparent;
